@@ -1,7 +1,7 @@
 package main
 
-type secondLittlePig struct {}
+type SecondLittlePig struct{}
 
-func (pig secondLittlePig) getMaterial() string {
+func (pig SecondLittlePig) GetMaterial() string {
 	return STICKS
 }

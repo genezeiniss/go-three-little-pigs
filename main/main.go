@@ -1,25 +1,44 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
-func main()  {
+type ChannelResult struct {
+	Pig   LittlePig
+	House House
+}
 
-	prologue := "Once upon a time there were three little pigs and the time came for them to leave home and seek their fortunes."
-	fmt.Println(prologue)
+func main() {
 
-	littlePigHouseMap := make(map[littlePig]house)
-	littlePigs := []littlePig{firstLittlePig{}, secondLittlePig{}, thirdLittlePig{}}
+	fmt.Println("Once upon a time there were three little pigs and the time came for them to leave home and seek their fortunes.")
 
-	for _, littlePig := range littlePigs {
-		littlePigHouseMap[littlePig] = buildHouse(littlePig)
+	littlePigs := []LittlePig{FirstLittlePig{}, SecondLittlePig{}, ThirdLittlePig{}}
+
+	channel := make(chan ChannelResult)
+
+	for _, pig := range littlePigs {
+		go BuildHouse(pig, channel)
 	}
 
-	bigBadWolf := bigBadWolf{}
+	pigHouseMap := make(map[LittlePig]House)
+	for i := 0; i < len(littlePigs); i++ {
+		channelResult := <-channel
+		pigHouseMap[channelResult.Pig] = channelResult.House
+	}
 
-	for  pig := range littlePigHouseMap {
+	fmt.Println("   ***   ")
+	fmt.Println("One night the Big Bad Wolf, who dearly loved to eat fat little piggies, came along.")
 
-		bigBadWolf.requestToEnter()
-		rejectRequest(pig)
-		bigBadWolf.huffAndPuff(littlePigHouseMap, pig)
+	BigBadWolf := BigBadWolf{}
+
+	for pig, house := range pigHouseMap {
+
+		fmt.Printf("Big Bad Wolf saw the little pig in his house of %s.\n", house.Material)
+
+		BigBadWolf.RequestToEnter()
+		RejectRequest(pig)
+		BigBadWolf.HuffAndPuff(pigHouseMap, pig)
+		fmt.Println("   ***   ")
 	}
 }

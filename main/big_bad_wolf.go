@@ -2,26 +2,26 @@ package main
 
 import "fmt"
 
-type bigBadWolf struct{}
+type BigBadWolf struct{}
 
-func (wolf bigBadWolf) requestToEnter() {
-	fmt.Println("Big Bad Wolf: \"Let me in, let me in!\"")
+func (wolf BigBadWolf) RequestToEnter() {
+	fmt.Println("Big Bad Wolf requested \"Let me in, let me in!\"")
 }
 
-func (wolf bigBadWolf) huffAndPuff(m map[littlePig]house, pig littlePig) {
+func (wolf BigBadWolf) HuffAndPuff(m map[LittlePig]House, pig LittlePig) {
 
 	mapSize := len(m)
-	houseMaterial := m[pig].material
+	houseMaterial := m[pig].Material
 
-	fmt.Println("Wolf huffs and puffs")
+	fmt.Println("Wolf huffed and puffed")
 
 	if BRICKS != houseMaterial {
 		delete(m, pig)
 	}
 
 	if mapSize > len(m) {
-		fmt.Printf("Wolf blew %v house\n", houseMaterial)
+		fmt.Printf("And blew the %v house and ate the %v.\n", houseMaterial, GetPigName(pig))
 	} else {
-		fmt.Printf("Wolf could not blow down %v house\n", houseMaterial)
+		fmt.Printf("Wolf is too weak to blow down the %v house. Wolf in risk to be eaten himself.\n", houseMaterial)
 	}
 }

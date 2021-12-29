@@ -9,8 +9,8 @@ func AmendString(str string) string {
 
 	var amendedString string
 
-	for _, letter := range str {
-		if unicode.IsUpper(letter){
+	for index, letter := range str {
+		if index > 0 && unicode.IsUpper(letter) {
 			amendedString = amendedString + " "
 		}
 		amendedString = amendedString + string(letter)

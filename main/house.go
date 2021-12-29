@@ -1,15 +1,15 @@
 package main
 
 const (
-	STRAW = "straw"
+	STRAW  = "straw"
 	STICKS = "sticks"
 	BRICKS = "bricks"
 )
 
-type house struct {
-	material string
+type House struct {
+	Material string
 }
 
-func newHouse(material string) house {
-	return house{material: material}
+func NewHouse(material string) House {
+	return House{Material: material}
 }

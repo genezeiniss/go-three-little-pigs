@@ -1,8 +1,7 @@
 package main
 
-type firstLittlePig struct {}
+type FirstLittlePig struct{}
 
-func (pig firstLittlePig) getMaterial() string {
+func (pig FirstLittlePig) GetMaterial() string {
 	return STRAW
 }
-

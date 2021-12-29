@@ -32,7 +32,7 @@ func printOutPigPerformance(pig LittlePig) {
 		suffix = "."
 	}
 
-	fmt.Printf("The %v built his House out of %v%v\n", GetPigName(pig), material, suffix)
+	fmt.Printf("The %s built his House out of %s%s\n", GetPigName(pig), material, suffix)
 }
 
 func GetPigName(pig LittlePig) string {
@@ -41,5 +41,5 @@ func GetPigName(pig LittlePig) string {
 
 func RejectRequest(pig LittlePig) {
 	reject := "Not by the hair of my chinny chin chin"
-	fmt.Printf("%v: \"%v\"\n", GetPigName(pig), reject)
+	fmt.Printf("%s: \"%s\"\n", GetPigName(pig), reject)
 }

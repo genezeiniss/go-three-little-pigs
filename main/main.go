@@ -9,9 +9,8 @@ type ChannelResult struct {
 	House House
 }
 
-func main() {
-
-	fmt.Println("Once upon a time there were three little pigs and the time came for them to leave home and seek their fortunes.")
+func actOne() map[LittlePig]House {
+	fmt.Println("\n*** Act one: Three Little Pigs build their houses ***")
 
 	littlePigs := []LittlePig{FirstLittlePig{}, SecondLittlePig{}, ThirdLittlePig{}}
 
@@ -27,8 +26,13 @@ func main() {
 		pigHouseMap[channelResult.Pig] = channelResult.House
 	}
 
-	fmt.Println("   ***   ")
-	fmt.Println("One night the Big Bad Wolf, who dearly loved to eat fat little piggies, came along.")
+	fmt.Println("\n")
+
+	return pigHouseMap
+}
+
+func actTwo(pigHouseMap map[LittlePig]House) {
+	fmt.Println("\n*** Act two: Big Bad Wold trying to reach and eat each pig ***")
 
 	BigBadWolf := BigBadWolf{}
 
@@ -39,6 +43,17 @@ func main() {
 		BigBadWolf.RequestToEnter()
 		RejectRequest(pig)
 		BigBadWolf.HuffAndPuff(pigHouseMap, pig)
-		fmt.Println("   ***   ")
+		fmt.Println("\n")
 	}
+}
+
+func main() {
+
+	fmt.Println("Once upon a time there were three little pigs and the time came for them to leave home and seek their fortunes...")
+
+	pigHouseMap := actOne()
+
+	fmt.Println("One night the Big Bad Wolf, who dearly loved to eat fat little piggies, came along...")
+
+	actTwo(pigHouseMap)
 }

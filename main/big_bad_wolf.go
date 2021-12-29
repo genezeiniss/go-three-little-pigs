@@ -20,8 +20,8 @@ func (wolf BigBadWolf) HuffAndPuff(m map[LittlePig]House, pig LittlePig) {
 	}
 
 	if mapSize > len(m) {
-		fmt.Printf("And blew the %v house and ate the %v.\n", houseMaterial, GetPigName(pig))
+		fmt.Printf("And blew the %s house and ate the %s.\n", houseMaterial, GetPigName(pig))
 	} else {
-		fmt.Printf("Wolf is too weak to blow down the %v house. Wolf in risk to be eaten himself.\n", houseMaterial)
+		fmt.Printf("Wolf is too weak to blow down the %s house. Wolf in risk to be eaten himself.\n", houseMaterial)
 	}
 }

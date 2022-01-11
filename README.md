@@ -40,9 +40,13 @@ Fortunately for that little pig, he learned that lesson. And he just lived happi
 ## Characters
 ### Big Bad Wolf
 "Let me in, Let me in, little pig, or I'll huff, and I'll puff, and I'll blow your house in!"
+
 -- ask to enter home: - ""Let me in, Let me in, little pig"
+
 -- huff and puff: - blow home (remove home from the map)
+
 -- eat little pig: - kill instance of Little Pig
+
 -- climb on a roof
 
 ### First Little Pig

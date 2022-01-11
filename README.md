@@ -35,7 +35,7 @@ The next day the little pig invited his mother over.
 She said "You see it is just as I told you. The way to get along in the world is to do things as well as you can."
 Fortunately for that little pig, he learned that lesson. And he just lived happily ever after!
 
-_Source_: http://www.hellokids.com/c_14958/reading-learning/stories-for-children/animal-stories-for-kids/the-three-little-pigs?pos=0#top_page
+[Source](http://www.hellokids.com/c_14958/reading-learning/stories-for-children/animal-stories-for-kids/the-three-little-pigs?pos=0#top_page)
 
 ## Characters
 ### Big Bad Wolf

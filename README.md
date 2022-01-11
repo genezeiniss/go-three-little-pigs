@@ -37,28 +37,4 @@ Fortunately for that little pig, he learned that lesson. And he just lived happi
 
 [Source](http://www.hellokids.com/c_14958/reading-learning/stories-for-children/animal-stories-for-kids/the-three-little-pigs?pos=0#top_page)
 
-## Characters
-### Big Bad Wolf
-"Let me in, Let me in, little pig, or I'll huff, and I'll puff, and I'll blow your house in!"
-
--- ask to enter home: - ""Let me in, Let me in, little pig"
-
--- huff and puff: - blow home (remove home from the map)
-
--- eat little pig: - kill instance of Little Pig
-
--- climb on a roof
-
-### First Little Pig
--- build house: - material: straw
--- reject request: - "Not by the hair of my chinny chin chin"
-
-### Second Little Pig
--- build house: - material: sticks
--- reject request: - "Not by the hair of my chinny chin chin"
-
-### Third Little Pig
--- build house: - material: bricks
--- reject request: - "Not by the hair of my chinny chin chin"
--- destroy big bad wolf.
 

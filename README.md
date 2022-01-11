@@ -1,3 +1,8 @@
+Do you remember the fable of the 🐷🐷🐷 who built their dwellings out of various materials and were attacked by the Big Bad Wolf?
+In this project I retaling this story in Go language (the level — absolute beginners).
+
+Please, find [related blog post](https://medium.com/geekculture/the-three-little-pigs-in-go-language-eb83ab469d6f?source=friends_link&sk=ae81d9084ef983f185bb30615ceedef1) [@Medium](https://genezeiniss.medium.com).
+
 # The three little pigs
 
 Once upon a time there were three little pigs and the time came for them to leave home and seek their fortunes. 
